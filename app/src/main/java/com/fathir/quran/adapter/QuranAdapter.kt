@@ -5,13 +5,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.fathir.quran.databinding.ItemSurahBinding
-import com.fathir.quran.network.SurahItem
+import com.fathir.quran.domain.model.Surah
 import com.fathir.quran.presentation.Quran.DetailSurahActivity
 
 class QuranAdapter : RecyclerView.Adapter<QuranAdapter.MyViewHolder>() {
-    private val listSurah = ArrayList<SurahItem>()
+    private val listSurah = ArrayList<Surah>()
 
-    fun setData(list: List<SurahItem>?) {
+    fun setData(list: List<Surah>?) {
         if (list == null) return
         listSurah.clear()
         listSurah.addAll(list)
