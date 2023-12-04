@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.fathir.quran.databinding.ItemSurahBinding
 import com.fathir.quran.domain.model.Surah
-import com.fathir.quran.presentation.Quran.DetailSurahActivity
+import com.fathir.quran.presentation.quran.DetailSurahActivity
 
 class QuranAdapter : RecyclerView.Adapter<QuranAdapter.MyViewHolder>() {
     private val listSurah = ArrayList<Surah>()

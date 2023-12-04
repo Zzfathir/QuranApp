@@ -1,40 +1,26 @@
-package com.fathir.quran.network
+package com.fathir.quran.data.network.quran
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import kotlinx.parcelize.Parcelize
 
 @JsonClass(generateAdapter = true)
-
-data class AyahResponse(
+data class SurahResponse(
 
     @Json(name="code")
     val code: Int? = null,
 
     @Json(name="data")
-    val quranEdition: List<QuranEdition>? = null,
+    val listSurah: List<SurahItem>,
 
     @Json(name="status")
     val status: String? = null
 )
 
-
+@Parcelize
 @JsonClass(generateAdapter = true)
-
-data class AyahsItem(
-
-    @Json(name="number")
-    val number: Int? = null,
-
-    @Json(name="numberInSurah")
-    val numberInSurah: Int? = null,
-
-    @Json(name="audio")
-    val audio: String? = null,
-)
-
-@JsonClass(generateAdapter = true)
-
-data class QuranEdition(
+data class SurahItem(
 
     @Json(name="number")
     val number: Int? = null,
@@ -51,9 +37,6 @@ data class QuranEdition(
     @Json(name="name")
     val name: String? = null,
 
-    @Json(name="ayahs")
-    val ayahs: List<AyahsItem>? = null,
-
     @Json(name="englishNameTranslation")
     val englishNameTranslation: String? = null
-)
+) :Parcelable

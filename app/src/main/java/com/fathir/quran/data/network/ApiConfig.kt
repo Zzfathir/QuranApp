@@ -1,5 +1,7 @@
-package com.fathir.quran.network
+package com.fathir.quran.data.network
 
+import com.fathir.quran.data.network.adzan.AdzanApiService
+import com.fathir.quran.data.network.quran.QuranApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -20,5 +22,7 @@ object ApiConfig {
             .build()
         return retrofit.create(T::class.java)
     }
-    val quranApiConfig = createApiConfig<QuranApiService>("https://api.alquran.cloud/v1/")
+    val quranApiService = createApiConfig<QuranApiService>("https://api.alquran.cloud/v1/")
+    val adzanApiService = createApiConfig<AdzanApiService>("https://api.myquran.com/v1/")
+
 }

@@ -18,7 +18,7 @@
             android:id="@+id/tv_number"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/ic_background_number"
+            android:background="@drawable/ic_round_number"
             android:gravity="center"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -60,7 +60,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
